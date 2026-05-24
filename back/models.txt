@@ -1,0 +1,35 @@
+Usuario
+  email
+  password
+  id_persona
+
+
+Persona
+  id_persona:pk
+  Nombre: str
+  Fecha nacimiento
+  Ciudad: enum
+  Departamento: enum
+  Nivel educación: enum(primaria, bachillerato, profesional, postgrado, doctorado)
+  Experiencia en Emprendimiento: booleano
+  tiempo disponible enum(limitado, medio tiempo, tiempo completo)
+  technology_comfort_level ( enum: low|medium|high)
+
+
+Idea
+  id_idea:pk
+  id_usuario: fk
+  problema: str
+  opportunity_score: float
+
+
+chat
+ id_idea: pk
+ mensajes[mensaje]
+
+mensaje
+id_mensaje: pk
+rol:enum(usuario, asistente)
+contenido: json
+timestap
+
